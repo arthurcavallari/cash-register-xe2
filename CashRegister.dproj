@@ -1,0 +1,304 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{0CBE39DF-0247-45F2-98D4-B1A00BC04330}</ProjectGuid>
+			<MainSource>CashRegister.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<TargetedPlatforms>1</TargetedPlatforms>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<ProjectVersion>13.4</ProjectVersion>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<Manifest_File>None</Manifest_File>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<VerInfo_Locale>3081</VerInfo_Locale>
+			<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<DCC_UsePackage>vcl;$(DCC_UsePackage)</DCC_UsePackage>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<DCC_UsePackage>vcl;ResizeKitPKD16;HsBarcode2DRun;$(DCC_UsePackage)</DCC_UsePackage>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Manifest_File>None</Manifest_File>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<Manifest_File>None</Manifest_File>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<DCC_ExeOutput>C:\DelphiExe\</DCC_ExeOutput>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="frmMainTillUnit.pas">
+				<Form>frmMain</Form>
+			</DCCReference>
+			<DCCReference Include="dmtillunit.pas">
+				<Form>tilldm</Form>
+			</DCCReference>
+			<DCCReference Include="frmPaymentUnit.pas">
+				<Form>frmPayment</Form>
+			</DCCReference>
+			<DCCReference Include="frmNumberInputUnit.pas">
+				<Form>frmNumberInputDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmDisplayUnit.pas">
+				<Form>frmDisplayDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmKeyboardUnit.pas">
+				<Form>frmKeyboard</Form>
+			</DCCReference>
+			<DCCReference Include="frmSearchProductsUnit.pas">
+				<Form>frmSearchProductsDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmRefundUnit.pas">
+				<Form>frmRefundDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmReturnUnit.pas">
+				<Form>frmReturnDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmGiftCardUnit.pas">
+				<Form>frmGiftCardDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmAddProductUnit.pas">
+				<Form>frmAddProductDialog</Form>
+			</DCCReference>
+			<DCCReference Include="CashRegisterUtils.pas"/>
+			<DCCReference Include="frmLoginUnit.pas">
+				<Form>frmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="frmOverrideUnit.pas">
+				<Form>frmOverride</Form>
+			</DCCReference>
+			<DCCReference Include="frmSearchOnHoldUnit.pas">
+				<Form>frmSearchOnHoldDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmSearchSupplierUnit.pas">
+				<Form>frmSelectSupplier</Form>
+			</DCCReference>
+			<DCCReference Include="frmSelectProductUnit.pas">
+				<Form>frmSelectProductDialog</Form>
+			</DCCReference>
+			<DCCReference Include="frmAddGiftCardUnit.pas">
+				<Form>frmAddGiftCardDialog</Form>
+			</DCCReference>
+			<DCCReference Include="repfrm.pas">
+				<Form>RepForm</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="CheckPrevious.pas"/>
+			<DCCReference Include="QuricolCode.pas"/>
+			<DCCReference Include="custUnit.pas">
+				<Form>custform</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="frmtaskunit.pas">
+				<Form>TaskForm</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<RcItem Include="Images\copy.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_1</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\cut.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_2</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\delete.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_3</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\Edit_RedoHS.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_4</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\Edit_UndoHS.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_5</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\FindNext_VS.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_6</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\Find_VS.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_7</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\FloppyDisk.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_8</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\paste.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_9</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\Printer.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_10</ResourceId>
+			</RcItem>
+			<RcItem Include="Images\search.png">
+				<ResourceType>RCDATA</ResourceType>
+				<ResourceId>PngImage_11</ResourceId>
+			</RcItem>
+			<None Include="Quricol.inc"/>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<ItemGroup>
+			<Reference Include="Quricol.Barcode.dll">
+				<AssemblyName/>
+				<CopyLocal>True</CopyLocal>
+				<HintPath>Quricol.Barcode.dll</HintPath>
+				<AssemblyTag>Quricol.Barcode</AssemblyTag>
+			</Reference>
+			<Reference Include="quricol32.dll">
+				<AssemblyName/>
+				<CopyLocal>True</CopyLocal>
+				<HintPath>quricol32.dll</HintPath>
+				<AssemblyTag>quricol32</AssemblyTag>
+			</Reference>
+			<Reference Include="quricol64.dll">
+				<AssemblyName/>
+				<CopyLocal>True</CopyLocal>
+				<HintPath>quricol64.dll</HintPath>
+				<AssemblyTag>quricol64</AssemblyTag>
+			</Reference>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">CashRegister.dpr</Source>
+					</Source>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">3081</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win64">False</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>
